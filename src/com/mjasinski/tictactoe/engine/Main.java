@@ -26,6 +26,11 @@ public class Main {
 
         while(true){
 
+            if (getNumberOfMovesMade() == 16) {
+                System.out.println("Game has tied!");
+                break;
+            }
+
             if(checkIfHasWon('X')){
                 System.out.println("Player X has won!");
                 break;
@@ -55,8 +60,8 @@ public class Main {
                 int position;
                 boolean validPosition;
                 do {
-                    System.out.printf("Row and column to insert X: \n");
-                    System.out.print("Column:");
+                    System.out.print("Row and column to insert X: \n");
+                    System.out.print("");
                     int column = scanner.nextInt();
                     System.out.print("Row: ");
                     int row = scanner.nextInt();
@@ -76,7 +81,7 @@ public class Main {
         }
     }
 
-    public static boolean insertMove(char playerChar, int position){
+    private static boolean insertMove(char playerChar, int position) {
 
         if(gameBoard[position] == ' '){
             gameBoard[position] = playerChar;
@@ -89,28 +94,21 @@ public class Main {
 
     private static boolean checkIfHasWon(char playerChar){
 
-        if (
-            checkRow(playerChar, 0) || checkRow(playerChar, 1) ||
-            checkRow(playerChar, 4) || checkRow(playerChar, 5) ||
-            checkRow(playerChar, 8) || checkRow(playerChar, 9) ||
-            checkRow(playerChar, 12) || checkRow(playerChar, 13) ||
+        return checkRow(playerChar, 0) || checkRow(playerChar, 1) ||
+                checkRow(playerChar, 4) || checkRow(playerChar, 5) ||
+                checkRow(playerChar, 8) || checkRow(playerChar, 9) ||
+                checkRow(playerChar, 12) || checkRow(playerChar, 13) ||
 
-            checkCol(playerChar, 0) || checkCol(playerChar, 4) ||
-            checkCol(playerChar, 1) || checkCol(playerChar, 5) ||
-            checkCol(playerChar, 2) || checkCol(playerChar, 6) ||
-            checkCol(playerChar, 3) || checkCol(playerChar, 7) ||
+                checkCol(playerChar, 0) || checkCol(playerChar, 4) ||
+                checkCol(playerChar, 1) || checkCol(playerChar, 5) ||
+                checkCol(playerChar, 2) || checkCol(playerChar, 6) ||
+                checkCol(playerChar, 3) || checkCol(playerChar, 7) ||
 
-            checkDiagUp(playerChar, 8) || checkDiagUp(playerChar, 9) ||
-            checkDiagUp(playerChar, 12) || checkDiagUp(playerChar, 13) ||
+                checkDiagUp(playerChar, 8) || checkDiagUp(playerChar, 9) ||
+                checkDiagUp(playerChar, 12) || checkDiagUp(playerChar, 13) ||
 
-            checkDiagDown(playerChar, 0) || checkDiagDown(playerChar,1) ||
-            checkDiagDown(playerChar, 4) || checkDiagDown(playerChar,5)
-        ){
-            return true;
-        } else {
-
-            return false;
-        }
+                checkDiagDown(playerChar, 0) || checkDiagDown(playerChar, 1) ||
+                checkDiagDown(playerChar, 4) || checkDiagDown(playerChar, 5);
     }
 
     private static boolean checkRow(char playerChar, int startPosition){
@@ -137,16 +135,28 @@ public class Main {
                 && gameBoard[startPosition - 6] == playerChar;
     }
 
-    public static String printBoard() {
+    private static int getNumberOfMovesMade() {
+        int movesMade = 0;
+        for (char field : gameBoard) {
+            if (field != ' ') movesMade++;
+        }
+
+        return movesMade;
+    }
+
+    private static String printBoard() {
 
         StringBuilder sb = new StringBuilder();
 
         sb.append("     0  1  2  3\n");
         for(int i = 0; i < gameBoard.length; i++){
             if(i % 4 == 0){
-                sb.append((i / 4) + "   ");
+                sb.append((i / 4));
+                sb.append("   ");
             }
-            sb.append(" " + gameBoard[i] + " ");
+            sb.append(" ");
+            sb.append(gameBoard[i]);
+            sb.append(" ");
             if((i+1) % 4 == 0){
                 sb.append("\n");
             }
