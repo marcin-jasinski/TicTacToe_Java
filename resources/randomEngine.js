@@ -1,5 +1,5 @@
 
-function insertOnRandomPosition(gameBoard){
+function makeNextMove(gameBoard,symbol){
 
     var min=0;
     var max=15;
@@ -7,9 +7,8 @@ function insertOnRandomPosition(gameBoard){
 
     do{
         randomPosition = Math.floor(Math.random() * (+max - +min)) + +min;
-
     }while(gameBoard[randomPosition] === ' ');
 
-    gameBoard[randomPosition] = 'O';
+    gameBoard[randomPosition] = symbol;
     return gameBoard;
 }

@@ -4,8 +4,6 @@ import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.Scanner;
 
 /**
@@ -38,17 +36,16 @@ public class Main {
                 break;
             }
 
-            computerMove = !computerMove;
-
             if(computerMove){
 
                 try {
-                    scriptEngine.eval(new FileReader("resources/test.js"));
+                    //scriptEngine.eval(new FileReader("resources/randomEngine.js"));
+                    scriptEngine.eval("load(\"resources/intelligentEngine.js\");");
                     Invocable invocable = (Invocable)scriptEngine;
 
-                    gameBoard = (char[])invocable.invokeFunction("insertOnRandomPosition", gameBoard);
+                    gameBoard = (char[])invocable.invokeFunction("makeNextMove", gameBoard, 'O');
 
-                } catch (ScriptException | FileNotFoundException | NoSuchMethodException e) {
+                } catch (ScriptException | NoSuchMethodException e) {
                     e.printStackTrace();
                 }
 
@@ -67,11 +64,15 @@ public class Main {
                     position = 4 * row + column;
 
                     validPosition = column >= 0 && row >= 0 && position >= 0 && position <= 15;
+
+                    if(!validPosition) System.out.println("Invalid position");
                 }while(!validPosition || !insertMove('X', position));
             }
 
             if(computerMove) System.out.println("Computer move: ");
             System.out.println(printBoard());
+
+            computerMove = !computerMove;
         }
     }
 
