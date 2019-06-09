@@ -60,8 +60,7 @@ public class Main {
                 int position;
                 boolean validPosition;
                 do {
-                    System.out.print("Row and column to insert X: \n");
-                    System.out.print("");
+                    System.out.print("Column: ");
                     int column = scanner.nextInt();
                     System.out.print("Row: ");
                     int row = scanner.nextInt();

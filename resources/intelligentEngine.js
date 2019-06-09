@@ -1,6 +1,6 @@
 debugger;
 
-var maxDepth = 3;
+var maxDepth = 5;
 
 var RESULT = {
     incomplete: 0,
@@ -108,12 +108,9 @@ function getBestMove (board,symbol,currentDepth){
             score = 1
         }
         else {
-            if(currentDepth != maxDepth){
-
-                var otherSymbol = (symbol=='X')? 'O' : 'X';
-                var nextMove = getBestMove(newBoard, otherSymbol,currentDepth+1);
-                score = -(nextMove.score)
-            }
+            var otherSymbol = (symbol=='X')? 'O' : 'X';
+            var nextMove = getBestMove(newBoard, otherSymbol,currentDepth+1);
+            score = -(nextMove.score);
         }
         if(score === 1) return ({move: move, score: score});
         availableMovesAndScores.push({move: move, score: score})
