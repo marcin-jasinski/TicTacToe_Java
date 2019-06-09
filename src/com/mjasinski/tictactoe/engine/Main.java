@@ -1,9 +1,5 @@
 package com.mjasinski.tictactoe.engine;
 
-import javax.script.Invocable;
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
 import java.util.Scanner;
 
 /**
@@ -13,12 +9,8 @@ public class Main {
 
     private static char[] gameBoard = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
 
-    private static ScriptEngine scriptEngine;
-
     public static void main(String[] args) {
-
-        scriptEngine = new ScriptEngineManager().getEngineByName("nashorn");
-
+        
         System.out.println(printBoard());
 
         boolean computerMove = false;
@@ -42,17 +34,6 @@ public class Main {
             }
 
             if(computerMove){
-
-                try {
-                    //scriptEngine.eval(new FileReader("resources/randomEngine.js"));
-                    scriptEngine.eval("load(\"resources/intelligentEngine.js\");");
-                    Invocable invocable = (Invocable)scriptEngine;
-
-                    gameBoard = (char[])invocable.invokeFunction("makeNextMove", gameBoard, 'O');
-
-                } catch (ScriptException | NoSuchMethodException e) {
-                    e.printStackTrace();
-                }
 
             } else {
 
