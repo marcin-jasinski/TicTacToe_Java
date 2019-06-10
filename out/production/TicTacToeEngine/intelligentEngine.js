@@ -3,26 +3,26 @@ debugger;
 var maxDepth = 5;
 
 var RESULT = {
-    incomplete: 0,
+    gameInProgress: 0,
     playerXWon: 'X',
     playerOWon: 'O',
     tie: 3
 };
 
-function moveCount(board){
-    var moveCount = 0;
+function moveCounter(board){
+    var moveCounter = 0;
     for (var i = 0; i<board.length; i++){
         if (board[i] != " "){
-            moveCount++
+            moveCounter++
         }
     }
-    return moveCount
+    return moveCounter;
 }
 
-function getResult(board,symbol){
+function getGameResult(board,symbol){
 
-    var result = RESULT.incomplete;
-    if (moveCount(board)<5){
+    var result = RESULT.gameInProgress;
+    if (moveCounter(board)<5){
         return result;
     }
 
@@ -39,20 +39,20 @@ function getResult(board,symbol){
         return line;
     }
 
-    function succession (line){
+    function threeCharsInRow (line){
         return line[0] == symbol && line[1] == symbol && line[2] == symbol;
     }
 
     for(var i = 0; i < positionsToCheck.length; i++){
         var positions = positionsToCheck[i];
         var line = checkRowColDiag(positions);
-        if(succession(line)){
+        if(threeCharsInRow(line)){
             result = symbol;
             return result;
         }
     }
 
-    if (moveCount(board) == 16){
+    if (moveCounter(board) == 16){
         result=RESULT.tie;
         return result;
     }
@@ -81,45 +81,30 @@ function getBestMove (board,symbol,currentDepth){
         return availableMoves
     }
 
-    function shuffleArray (array){
-        for (var i = array.length - 1; i > 0; i--) {
-
-            var rand = Math.floor(Math.random() * (i + 1));
-
-            var temp = array[i];
-            array[i] = array[rand];
-            array[rand] = temp;
-        }
-    }
-
     var availableMoves = getAvailableMoves(board)
     var availableMovesAndScores = []
 
     for (var i=0 ; i<availableMoves.length ; i++){
-        // Iterates over each available move. If it finds a winning move it returns it immediately. Otherwise it pushes a move and a score to the availableMovesAndScores array.
         var move = availableMoves[i]
         var newBoard = copyBoard(board)
         // var newBoard = board.slice();
         newBoard[move] = symbol;
-        var result = getResult(newBoard,symbol);
+        var result = getGameResult(newBoard,symbol);
         var score
         if (result == RESULT.tie) {score = 0}
         else if (result == symbol) {
             score = 1
         }
         else {
-            // if(currentDepth != maxDepth){
-
+            if(currentDepth != maxDepth){
                 var otherSymbol = (symbol=='X')? 'O' : 'X';
                 var nextMove = getBestMove(newBoard, otherSymbol,currentDepth+1);
                 score = -(nextMove.score)
-            // }
+            }
         }
         if(score === 1) return ({move: move, score: score});
         availableMovesAndScores.push({move: move, score: score})
     }
-
-    shuffleArray(availableMovesAndScores)
 
     function compare( a, b ) {
         if ( a.score < b.score ){
