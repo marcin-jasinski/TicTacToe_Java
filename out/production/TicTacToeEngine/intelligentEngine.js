@@ -9,7 +9,7 @@ var RESULT = {
     tie: 3
 };
 
-function moveCounter(board){
+function getNumberOfMovesMade(board){
     var moveCounter = 0;
     for (var i = 0; i<board.length; i++){
         if (board[i] != " "){
@@ -19,10 +19,10 @@ function moveCounter(board){
     return moveCounter;
 }
 
-function getGameResult(board,symbol){
+function checkIfHasWon(board, symbol){
 
     var result = RESULT.gameInProgress;
-    if (moveCounter(board)<5){
+    if (getNumberOfMovesMade(board)<5){
         return result;
     }
 
@@ -52,7 +52,7 @@ function getGameResult(board,symbol){
         }
     }
 
-    if (moveCounter(board) == 16){
+    if (getNumberOfMovesMade(board) == 16){
         result=RESULT.tie;
         return result;
     }
@@ -89,7 +89,7 @@ function getBestMove (board,symbol,currentDepth){
         var newBoard = copyBoard(board)
         // var newBoard = board.slice();
         newBoard[move] = symbol;
-        var result = getGameResult(newBoard,symbol);
+        var result = checkIfHasWon(newBoard,symbol);
         var score
         if (result == RESULT.tie) {score = 0}
         else if (result == symbol) {
