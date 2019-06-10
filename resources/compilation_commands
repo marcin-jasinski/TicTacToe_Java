@@ -1,0 +1,5 @@
+javac -h . Main.java
+
+g++ -c -I%JAVA_HOME%\include -I%JAVA_HOME%\include\win32 com_mjasinski_tictactoe_engine_Main.cpp -o com_mjasinski_tictactoe_engine_Main.dll -m64
+
+g++ -shared -o native.dll com_mjasinski_tictactoe_engine_Main.dll -Wl,--add-stdcall-alias

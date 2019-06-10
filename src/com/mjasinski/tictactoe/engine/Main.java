@@ -7,10 +7,14 @@ import java.util.Scanner;
  */
 public class Main {
 
+    static {
+        System.loadLibrary("native");
+    }
+
     private static char[] gameBoard = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
 
     public static void main(String[] args) {
-        
+
         System.out.println(printBoard());
 
         boolean computerMove = false;
@@ -34,6 +38,8 @@ public class Main {
             }
 
             if(computerMove){
+
+                sayHello();
 
             } else {
 
@@ -60,6 +66,8 @@ public class Main {
             computerMove = !computerMove;
         }
     }
+
+    public static native void sayHello();
 
     private static boolean insertMove(char playerChar, int position) {
 
