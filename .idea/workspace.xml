@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cc2d63e6-276a-4b50-b0b7-cacc3068f3ec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/compilation_commands" beforeDir="false" afterPath="$PROJECT_DIR$/resources/compilation_commands" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/com_mjasinski_tictactoe_engine_Main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/com_mjasinski_tictactoe_engine_Main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/com_mjasinski_tictactoe_engine_Main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/com_mjasinski_tictactoe_engine_Main.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/com_mjasinski_tictactoe_engine_Main.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/com_mjasinski_tictactoe_engine_Main.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/com_mjasinski_tictactoe_engine_Main.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/native.dll" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="333">
+              <caret line="45" column="73" selection-start-line="45" selection-start-column="73" selection-end-line="45" selection-end-column="73" />
               <folding>
                 <element signature="method#insertMove#0;class#Main#0" />
                 <element signature="method#checkIfHasWon#0;class#Main#0" />
@@ -48,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/resources/compilation_commands">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="19" selection-start-line="4" selection-end-line="5" />
+              <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -56,17 +55,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/com_mjasinski_tictactoe_engine_Main.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="80" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
+            <state relative-caret-position="510">
+              <caret line="30" selection-start-line="30" selection-end-line="30" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/com_mjasinski_tictactoe_engine_Main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+            <state relative-caret-position="1024">
+              <caret line="155" column="9" lean-forward="true" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -100,14 +99,14 @@
         <option value="$PROJECT_DIR$/resources/randomEngine.js" />
         <option value="$PROJECT_DIR$/resources/intelligentEngine.js" />
         <option value="$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/native_lib.cpp" />
+        <option value="$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/com_mjasinski_tictactoe_engine_Main.h" />
         <option value="$PROJECT_DIR$/resources/compilation_commands" />
         <option value="$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/com_mjasinski_tictactoe_engine_Main.h" />
         <option value="$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/com_mjasinski_tictactoe_engine_Main.cpp" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1615" />
@@ -130,6 +129,11 @@
             <path>
               <item name="TicTacToeEngine" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToeEngine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToeEngine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToeEngine" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicTacToeEngine" type="b2602c69:ProjectViewProjectNode" />
@@ -244,13 +248,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30177000" />
+    <option name="totallyTimeSpent" value="36253000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28456375" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26442954" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -267,7 +270,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.41784704" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.34844193" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.83002836" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -319,31 +322,24 @@
     <entry file="file://$PROJECT_DIR$/resources/randomEngine.js" />
     <entry file="file://$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/native_lib.h" />
     <entry file="file://$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/native_lib.cpp" />
-    <entry file="file://$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/com_mjasinski_tictactoe_engine_Main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/com_mjasinski_tictactoe_engine_Main.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="80" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
+        <state relative-caret-position="510">
+          <caret line="30" selection-start-line="30" selection-end-line="30" selection-end-column="79" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/compilation_commands">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="19" selection-start-line="4" selection-end-line="5" />
+          <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="333">
+          <caret line="45" column="73" selection-start-line="45" selection-start-column="73" selection-end-line="45" selection-end-column="73" />
           <folding>
             <element signature="method#insertMove#0;class#Main#0" />
             <element signature="method#checkIfHasWon#0;class#Main#0" />
@@ -354,6 +350,13 @@
             <element signature="method#getNumberOfMovesMade#0;class#Main#0" />
             <element signature="method#printBoard#0;class#Main#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mjasinski/tictactoe/engine/com_mjasinski_tictactoe_engine_Main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1024">
+          <caret line="155" column="9" lean-forward="true" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
         </state>
       </provider>
     </entry>

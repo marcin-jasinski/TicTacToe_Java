@@ -39,7 +39,13 @@ public class Main {
 
             if(computerMove){
 
-                new Main().sayHello();
+                char symbol = 'O';
+
+                // int move = new Main().randomMove(gameBoard, symbol);
+
+                int move = new Main().intelligentMove(gameBoard, symbol);
+
+                gameBoard[move] = symbol;
 
             } else {
 
@@ -67,7 +73,11 @@ public class Main {
         }
     }
 
-    public native void sayHello();
+    private native void sayHello();
+
+    private native int randomMove(char[] gameBoard, char symbol);
+
+    private native int intelligentMove(char[] gameBoard, char symbol);
 
     private static boolean insertMove(char playerChar, int position) {
 

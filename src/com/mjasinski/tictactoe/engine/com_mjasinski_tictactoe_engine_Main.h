@@ -12,7 +12,24 @@ extern "C" {
  * Method:    sayHello
  * Signature: ()V
  */
-JNIEXPORT void JNICALL Java_com_mjasinski_tictactoe_engine_Main_sayHello(JNIEnv *, jobject);
+JNIEXPORT void JNICALL Java_com_mjasinski_tictactoe_engine_Main_sayHello
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     com_mjasinski_tictactoe_engine_Main
+ * Method:    randomMove
+ * Signature: ([CC)I
+ */
+JNIEXPORT jint JNICALL Java_com_mjasinski_tictactoe_engine_Main_randomMove
+  (JNIEnv *, jobject, jcharArray, jchar);
+
+/*
+ * Class:     com_mjasinski_tictactoe_engine_Main
+ * Method:    intelligentMove
+ * Signature: ([CC)I
+ */
+JNIEXPORT jint JNICALL Java_com_mjasinski_tictactoe_engine_Main_intelligentMove
+  (JNIEnv *, jobject, jcharArray, jchar);
 
 #ifdef __cplusplus
 }
