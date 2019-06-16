@@ -12,8 +12,7 @@ extern "C" {
  * Method:    sayHello
  * Signature: ()V
  */
-JNIEXPORT void JNICALL Java_com_mjasinski_tictactoe_engine_Main_sayHello
-  (JNIEnv *, jclass);
+JNIEXPORT void JNICALL Java_com_mjasinski_tictactoe_engine_Main_sayHello(JNIEnv *, jobject);
 
 #ifdef __cplusplus
 }

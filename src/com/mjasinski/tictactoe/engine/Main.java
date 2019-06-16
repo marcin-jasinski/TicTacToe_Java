@@ -39,7 +39,7 @@ public class Main {
 
             if(computerMove){
 
-                sayHello();
+                new Main().sayHello();
 
             } else {
 
@@ -67,7 +67,7 @@ public class Main {
         }
     }
 
-    public static native void sayHello();
+    public native void sayHello();
 
     private static boolean insertMove(char playerChar, int position) {
 
